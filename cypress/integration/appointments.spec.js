@@ -26,9 +26,7 @@ describe("Appointments", () => {
       .first()
       .click({ force: true });
 
-    cy.get("[data-testid=student-name-input]")
-      .clear()
-      .type("Lydia Miller-Jones");
+    cy.get("[data-testid=student-name-input]").clear().type("Lydia Miller-Jones");
     cy.get('[alt="Tori Malcolm"]').click();
 
     cy.contains("Save").click();
